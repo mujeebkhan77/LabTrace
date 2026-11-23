@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabTrace - Update Complaint</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+
+        <div class="sidebar">
+            <div class="brand-logo"><div class="logo-icon">L</div><span>LABTRACE</span></div>
+            <p class="menu-heading">TECHNICIAN MENU</p>
+            <a href="technician-dashboard.html" class="menu-link">Dashboard</a>
+            <a href="submitted-complaints.html" class="menu-link">Submitted Complaints</a>
+            <a href="update-complaint.html" class="menu-link active">Update Status</a>
+            <div class="sidebar-bottom"><a href="index.html" class="menu-link">Logout</a></div>
+        </div>
+
+        <div class="main-content">
+            <div class="topbar">
+                <div><h5>Update Complaint</h5><p>Update repair progress and details</p></div>
+                <div class="student-info">
+                    <div class="student-avatar">T</div>
+                    <div><strong>Ahmed Khan</strong><small>Lab Technician</small></div>
+                </div>
+            </div>
+
+            <div class="page-heading">
+                <h2>Complaint Details</h2>
+                <p>Review the issue and record your maintenance work.</p>
+            </div>
+
+            <div class="report-form">
+                <h5 class="mb-4">Complaint Information</h5>
+
+                <div class="mb-3">
+                    <label class="form-label">Complaint ID</label>
+                    <input type="text" class="form-control" value="#LT-0012" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Computer ID</label>
+                    <input type="text" class="form-control" value="PC-204" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Reported Issue</label>
+                    <input type="text" class="form-control" value="Keyboard not working" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Update Status</label>
+                    <select class="form-select">
+                        <option>Pending</option>
+                        <option selected>In Progress</option>
+                        <option>Resolved</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Repair Notes</label>
+                    <textarea class="form-control" rows="5" placeholder="Describe the repair work performed..."></textarea>
+                </div>
+
+                <button type="button" class="btn login-btn">Save Update</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

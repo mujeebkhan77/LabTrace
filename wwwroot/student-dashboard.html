@@ -1,0 +1,155 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabTrace - Student Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <div class="brand-logo">
+                <div class="logo-icon">L</div>
+                <span>LABTRACE</span>
+            </div>
+
+            <p class="menu-heading">MENU</p>
+
+            <a href="student-dashboard.html" class="menu-link active">
+                Dashboard
+            </a>
+
+            <a href="#" class="menu-link">
+                Report a Fault
+            </a>
+
+            <a href="#" class="menu-link">
+                My Complaints
+            </a>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" class="menu-link">Logout</a>
+            </div>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <!-- Topbar -->
+            <div class="topbar">
+                <div>
+                    <h5>Student Dashboard</h5>
+                    <p>University Computer Lab Maintenance</p>
+                </div>
+
+                <div class="student-info">
+                    <div class="student-avatar">S</div>
+                    <div>
+                        <strong>Student Name</strong>
+                        <small>BS Software Engineering</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <div>
+                    <h2>Welcome back, Student!</h2>
+                    <p>Keep track of your reported computer issues.</p>
+                </div>
+
+                <a href="#" class="report-btn">+ Report a Fault</a>
+            </div>
+
+            <!-- Summary Cards -->
+            <div class="summary-cards">
+
+                <div class="summary-card">
+                    <p>Total Complaints</p>
+                    <h2>12</h2>
+                    <small>All submitted complaints</small>
+                </div>
+
+                <div class="summary-card">
+                    <p>Pending Complaints</p>
+                    <h2>04</h2>
+                    <small>Waiting for attention</small>
+                </div>
+
+                <div class="summary-card">
+                    <p>Resolved Complaints</p>
+                    <h2>08</h2>
+                    <small>Successfully repaired</small>
+                </div>
+
+            </div>
+
+            <!-- Recent Complaints -->
+            <div class="complaints-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h5>Recent Complaints</h5>
+                        <p>Overview of your latest reports</p>
+                    </div>
+
+                    <a href="#">View all</a>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Complaint ID</th>
+                                <th>Computer</th>
+                                <th>Issue</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>#LT-0012</td>
+                                <td>PC-204</td>
+                                <td>Keyboard not working</td>
+                                <td>20 Nov 2026</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>#LT-0011</td>
+                                <td>PC-108</td>
+                                <td>System not starting</td>
+                                <td>18 Nov 2026</td>
+                                <td><span class="status progress">In Progress</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>#LT-0010</td>
+                                <td>PC-305</td>
+                                <td>Mouse not working</td>
+                                <td>15 Nov 2026</td>
+                                <td><span class="status resolved">Resolved</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
