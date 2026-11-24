@@ -1,0 +1,63 @@
+﻿@model List<LabTrace.Models.Complaint>
+
+@{
+    ViewData["Title"] = "Complaints";
+}
+
+<h2>All Complaints</h2>
+
+<button id="loadBtn" class="btn btn-primary mb-3">
+    Load Complaints
+</button>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Computer ID</th>
+            <th>Description</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody id="complaintTable">
+        @foreach (var complaint in Model)
+        {
+            <tr>
+                <td>@complaint.ComplaintId</td>
+                <td>@complaint.ComputerId</td>
+                <td>@complaint.Description</td>
+                <td>@complaint.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    document.getElementById("loadBtn").addEventListener("click", function () {
+
+        fetch('/Home/GetComplaintsData')
+            .then(response => response.json())
+            .then(data => {
+
+                let table = document.getElementById("complaintTable");
+
+                table.innerHTML = "";
+
+                data.forEach(complaint => {
+
+                    let row = `
+                        <tr>
+                            <td>${complaint.complaintId}</td>
+                            <td>${complaint.computerId}</td>
+                            <td>${complaint.description}</td>
+                            <td>${complaint.status}</td>
+                        </tr>
+                    `;
+
+                    table.innerHTML += row;
+                });
+
+            });
+    });
+</script>
